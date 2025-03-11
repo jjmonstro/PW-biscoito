@@ -1,2 +1,5 @@
-<img [src]="foto">
-<button (click)="biscoito()">Biscoito</button>
+<div>
+  <img [src]="foto ? 'biscoito-aberto.png' : 'biscoito.png'">
+  <br>
+  <button (click)="biscoito()">Biscoito</button>
+</div>

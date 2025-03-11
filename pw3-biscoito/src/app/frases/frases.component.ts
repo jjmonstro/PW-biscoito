@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -18,7 +18,12 @@ export class FrasesComponent {
     "Se você pode sonhar, pode realizar.",
     "A persistência realiza o impossível."
   ];
-  
+
   frase = this.frases[Math.floor(Math.random() * 10)]; // Inicializa com a primeira frase
-  exibir=true
+  @Input()exibir : boolean = true;
+
+  exibirM(){
+    this.exibir = !this.exibir;
+    
+  }
 }
